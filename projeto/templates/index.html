@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>{{ title|default('Minha página') }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}">
+    </head>
+    <body>
+      <header>
+        <img class="logo" src="/static/logo.jpg" alt="logo">
+        <nav>
+          <ul class="nav_links">
+            <li><a href="/pnad/"><button>Tabela PNAD 2012</button></a></li>
+            <li><a href="/form/"><button>Qual o seu privilégio</button></a></li>
+          </ul>
+        </nav>
+        <a class="cta" href="/index/"><button>Contato</button></a>
+      </header>
+        <div class="container">
+            <center><img style="width:100%" id="image" height="500px" src="/static/raca.jpg">
+              <h1>Dados sobre o Brasil</h1>
+              <h3>Descubra seus privilégios através de informações como sua raça, renda e idade.</h3>
+            </center>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+       <title>{{ title|default('Minha página') }}</title>
+        <link
+            rel="stylesheet"
+            href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+        />
+        <link
+            rel="stylesheet"
+            href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css"
+        />
+        <!-- Milligram https://milligram.io/#getting-started -->
+        <link
+            rel="stylesheet"
+            href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css"
+        />
+     
+    </head>
+
+    <body>
+    <h1>Tabela PNAD</h1>
+     <table>
+    <tr>
+        {% for col in column_names %}
+        <th>{{col}}</th>
+        {% endfor %}
+    </tr>
+    {% for row in row_data %}
+    <tr>
+        {% for col, row_ in zip(column_names, row) %}
+        {% if col == link_column %}
+        {% else %}
+        <td>{{row_}}</td>
+        {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+</table>
+    </body>
+</html>

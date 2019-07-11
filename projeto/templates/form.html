@@ -1,0 +1,68 @@
+<html>
+	<head>
+        <title>{{ title|default('Minha página') }}</title>
+        <link
+            rel="stylesheet"
+            href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+        />
+        <link
+            rel="stylesheet"
+            href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css"
+        />
+        <!-- Milligram https://milligram.io/#getting-started -->
+        <link
+            rel="stylesheet"
+            href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css"
+        />
+    </head>
+
+   <body>
+      <form action = "http://localhost:5000/form/result" method = "POST">
+			<h4>Nome<input type ="text" name = "nome" /></h4>
+			<h4>Idade<input type ="text" name = "idade" /></h4>
+		 <h4>Gênero</h4>
+         	<p><input type = "radio" name = "genero" id ="m" value = "Masculino" />Masculino</p>
+		 	<p><input type = "radio" name ="genero" id="f" value="Feminino" />Feminino</p>
+		 	<p><input type = "radio" name = "genero" id="o" value = "Outro" />Outro</p>
+         <h4>Renda(R$) <input type ="text" name = "renda"/></h4>
+				 <label for="Estado"><h4>Estado</h4></label>
+				 <select name =estado id="Estado">
+				 	<option value="AC">AC</option>
+					<option value="AL">AL</option>
+					<option value="AP">AP</option>
+					<option value="AM">AM</option>
+					<option value="BA">BA</option>
+					<option value="CE">CE</option>
+					<option value="DF">DF</option>
+					<option value="ES">ES</option>
+					<option value="GO">GO</option>
+					<option value="MA">MA</option>
+					<option value="MT">MT</option>
+					<option value="MS">MS</option>
+					<option value="MG">MG</option>
+					<option value="PA">PA</option>
+					<option value="PB">PB</option>
+					<option value="PR">PR</option>
+					<option value="PE">PE</option>
+					<option value="PI">PI</option>
+					<option value="RJ">RJ</option>
+					<option value="RN">RN</option>
+					<option value="RS">RS</option>
+					<option value="RO">RO</option>
+					<option value="RR">RR</option>
+					<option value="SC">SC</option>
+					<option value="SP">SP</option>
+					<option value="SE">SE</option>
+					<option value="TO">TO</option>
+				 </select>
+         <h4>Raça</h4>
+         	<p><input type = "radio" name = "raca" id="n" value = "Negro" />Negro</p>
+		 	<p><input type = "radio" name = "raca" id = "b" value ="Branco" />Branco</p>
+			<p><input type = "radio" name ="raca" id ="p" value ="Pardo" />Pardo</p>
+		 	<p><input type = "radio" name ="raca" id ="a" value = "Amarelo" />Amarelo</p>
+		    <p><input type = "radio" name ="raca" id="i" value = "Indio" />Indio</p>
+
+         	<p><input type = "submit" value = "enviar" /></p>
+      </form>
+   </body>
+</html>

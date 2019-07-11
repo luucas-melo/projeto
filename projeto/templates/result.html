@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+   <head>
+        <title>{{ title|default('Minha página') }}</title>
+        <link
+            rel="stylesheet"
+            href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+        />
+        <link
+            rel="stylesheet"
+            href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css"
+        />
+        <!-- Milligram https://milligram.io/#getting-started -->
+        <link
+            rel="stylesheet"
+            href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css"
+        />
+    </head>
+   <body>
+      <table border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+	<center>
+	<div>
+	<h4>{{nome}},</h4>
+	{% if renda>=media %} <!-- verifica se recebe mais que a media dos brasileiros-->
+    <p>você recebe R$<font color="green">{{valor}}</font> a mais que a média dos brasileiros</p>
+	{% else%}
+    <p>Você recebe R$<font color="red">{{valor}}</font> a  menos em relação a média </p>
+	{% endif %}
+	{% if valor_bran>=0 %} <!-- verifica se recebe mais que a renda media dos brancos-->
+    <p>você recebe R$<font color="green">{{valor_bran}}</font> a mais que os brancos do Brasil</p>
+	{% else %}<!--verifica se recebe menos que a renda media dos brancos-->
+	<p>você recebe R$<font color="red">{{valor_bran}}</font> a menos que os brancos do Brasil</p>
+	{% endif %}
+	{% if valor_negr>=0 %} <!-- verifica se recebe mais que a renda media dos negros-->
+    <p>você recebe R$<font color="green">{{valor_negr}}</font> a mais que os negros do Brasil</p>
+	{% else %} <!--verifica se recebe menos que a renda media dos negros-->
+	<p>você recebe R$<font color="red">{{valor_negr}}</font> a menos que os brancos do Brasil</p>
+	{% endif %}
+	{% if renda_mulher>=0 %}
+	<p>você recebe R$<font color="green">{{renda_mulher}}</font> a mais que as mulheres do Brasil</p>
+	{% else %}
+	<p>você recebe R$<font color="red">{{renda_mulher}}</font> a menos que as mulheres do Brasil</p>
+	{% endif %}
+	{% if renda>=0 %}
+	<p>você recebe R$<font color="green">{{renda_homem}}</font> a mais que os homens do Brasil</p>
+	{% else %}
+	<p>você recebe R$<font color="red">{{renda_homem}}</font> a menos que os homens do Brasil</p>
+	{% endif %}
+	</div>
+	<img src="/static/azul.png">
+	<img src="/static/verde.png">
+	<img src="/static/cinza.png">
+	<img src="/static/vermelho.png"></center>
+   </body>
+</html>
