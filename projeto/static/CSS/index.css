@@ -1,64 +1,58 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 *{
-   box-sizing: border-box;
-   margin: 0px;
-   padding: 0px;
-   background-color: #24252A;
-}
-
-h1,h3{
-  color: white;
-}
-
-.logo{
-  width: 150px;
-  height: 50px;
-  margin-right: auto;
-  cursor: pointer;
-}
-
-li,a,button{
-  font-family: "Roboto", sans-serif;
-  font-weight: 500px;
-  font-size: 15px;
-  color: #edf0f1;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic;
 }
 
 header{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 30px 10%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../tarsila.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
-.nav_links{
-  list-style: none;
+.logo img{
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+  width: 150px;
+  height: auto;
 }
 
-.nav_links li{
-  display: inline-block;
-  padding: 0px 20px;
+.title{
+  position: absolute;
+  top: 40%;
+  left: 46%;
+  transform: translate(-50%-50%);
+}
+.title h3{
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 40px
+}
+.title h1{
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 70px;
 }
 
-.nav_links li a{
-  transition: all 0.3s ease 0s;
-}
-.nav_links li a:hover{
-  color: #0088a9;
-}
-
-button{
-  padding: 9px 25px;
-  background-color: rgba(0,136,169,1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  margin-left: 20px;
+.button{
+  position: absolute;
+  top: 49%;
+  left: 8%;
+  transform: translate(-50%-50%);
 }
 
-button:hover{
-  background-color: rgba(0,136,169,0.8);
+.btn{
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.6s ease;
+}
+
+.btn:hover{
+  background-color: #fff;
+  color: #000;
+
 }
